@@ -1,0 +1,108 @@
+/*ce qui va s'apliquer à la racine*/
+:root {                          
+    /*définition de constantes globales green, white, black */
+    --white: #ffffff;
+    --black: #000000;
+
+    --yellow: #f1f509;
+    --blue: #043efa;
+    --red:  #fa0404;
+
+    --green: #00FF00;
+    --orange: #ff8800;
+    --violet: #ff00dd;
+
+    --Darkgrey:  #5a5555;
+    --Lightgrey:  #f3e7e7;
+    
+}
+
+/*Le sélecteur * est un sélecteur universel qui s’applique à tous les éléments de la page */
+/* (sauf lorsqu’un sélecteur d’éléments plus spécifique le remplace).*/
+* { 
+    color: var(--fontColor);  /* definition variable fontcolor pour la couleur de police*/ 
+    background: var(--bg) ;   /* definition variable bg pour la couleur du background */
+    font-family: helvetica;    
+  }
+  
+
+  img {
+    width: 50%;
+    height: auto ;
+  }
+
+
+/* NIVEAU 1: css complètement statique
+.light-theme {
+    color: #000000; 
+    background: #00FF00;
+  }
+*/
+
+/* NIVEAU 2: css mi-statique: couleur de font et background sont associés à des variables
+.light-theme {
+    color:var(--black);
+    background:var(--white) ;
+ }
+*/
+
+/* NIVEAU 3: le nom même de color et de background sont modifiés et associés à des variables */
+ .light-theme {
+    --fontColor:var(--black);
+    --bg:var(--white) ;
+
+    --boutonBg: var(--black);
+    --boutonFontColor: var(--white);
+
+    --btHovColor: var(--black) ; 
+    --btHovBg: var(--Lightgrey) ; 
+ }
+ 
+.dark-theme {
+    --fontColor:var(--white);
+    --bg:var(--black) ;
+
+    --boutonBg: var(--white);
+    --boutonFontColor: var(--black);
+
+    --btHovColor: var(--white) ; 
+    --btHovBg: var(--Darkgrey) ; 
+ }
+
+ul {
+	font-family: fantasy;
+}
+
+li {
+	list-style: circle;
+}
+
+.list {
+    list-style: square; 
+     font-family:fantasy;
+
+}
+
+#msg {
+	font-family: monospace;
+}
+
+.bouton {
+  color: var(--boutonFontColor);
+  background-color: var(--boutonBg);
+  position: absolute;
+  top: 20px;
+  left: 250px;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  border: none;
+
+}
+
+.bouton:focus { outline-style: none; }
+
+.bouton:hover{
+  background-color: var(--btHovBg);
+  color:var(--btHovColor);
+}
