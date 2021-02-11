@@ -1,6 +1,6 @@
 'use strict'
 // On utilise document.querySelector pour afficher la référence du bouton
-const switcher = document.querySelector('.bouton');
+const switcher = document.querySelector('.boutonBckgr');
 // On  ajoute ensuite le détecteur d’événements et le gestionnaire d’événements 
 // pour l’événement click.
 // Dans le code suivant, on ajoute un écouteur pour l’événement click. 

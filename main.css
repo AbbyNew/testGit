@@ -87,7 +87,31 @@ li {
 	font-family: monospace;
 }
 
-.bouton {
+button{
+  color: var(--boutonFontColor);
+  background-color: var(--boutonBg);    
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  border: none;
+
+}
+
+button:focus { outline-style: none; }
+
+button:hover{
+  background-color: var(--btHovBg);
+  color:var(--btHovColor);
+}
+
+.boutonBckgr{
+  position: absolute;
+  top: 20px;
+  left: 250px;
+}
+
+
+/* .bouton {
   color: var(--boutonFontColor);
   background-color: var(--boutonBg);
   position: absolute;
@@ -105,4 +129,5 @@ li {
 .bouton:hover{
   background-color: var(--btHovBg);
   color:var(--btHovColor);
-}
+} */
+
